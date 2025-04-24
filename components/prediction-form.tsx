@@ -53,7 +53,7 @@ export function PredictionForm() {
     setPrediction(null)
 
     try {
-      const response = await fetch("https://house-predicytion-5.onrender.com/api/predict", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
