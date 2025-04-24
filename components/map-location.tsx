@@ -33,7 +33,7 @@ export function MapLocation({ onLocationSelect }: MapLocationProps) {
 
     // Create script element to load Google Maps API
     const googleMapsScript = document.createElement("script")
-    googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCTySZXxOv5tGnpOFGGZQcmaHcxsYI1nx8&libraries=places`
+    googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`;
     googleMapsScript.async = true
     googleMapsScript.defer = true
 
